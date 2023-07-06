@@ -1,0 +1,307 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: HanKenBold;
+    src: url('assets/fonts/static/HankenGrotesk-Bold.ttf');
+}
+
+@font-face {
+    font-family: HanKenExBold;
+    src: url('assets/fonts/static/HankenGrotesk-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: HanKenMedium;
+    src: url('assets/fonts/static/HankenGrotesk-Medium.ttf');
+}
+
+:root {
+    --CIRCLE-BG-COLOR: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    --HEADER-BG-COLOR: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --REACTION-BG-COLOR: hsla(0, 100%, 67%, 0.1);
+    --REACTION-FONT-COLOR: hsl(0, 100%, 67%);
+    --MEMORY-BG-COLOR: hsl(39, 100%, 56%, 0.1);
+    --MEMORY-FONT-COLOR: hsl(39, 100%, 56%);
+    --VERBAL-BG-COLOR: hsl(166, 100%, 37%,0.1);
+    --VERBAL-FONT-COLOR: hsl(166, 100%, 37%);
+    --VISUAL-BG-COLOR: hsl(234, 85%, 45%,0.1);
+    --VISUAL-FONT-COLOR: hsl(234, 85%, 45%);
+    --BUTTON-FONT-COLOR: #fff;
+    --BUTTON-BG-COLOR: #333;
+    --BUTTON-BG-ACTION-COLOR: hsla(256, 72%, 46%, 1);
+
+    --FF-HANKEN-EX-BOLD: HanKenExBold, sans-serif;
+    --FF-HANKEN-BOLD: HanKenBold, sans-serif;
+    --FF-HANKEN-MEDIUM: HanKenMedium, sans-serif;
+}
+
+html {
+    max-width: 5000px;
+}
+
+.main_header {
+    background: var(--HEADER-BG-COLOR);
+    color: #fff;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em auto;
+}
+
+.header_span {
+    padding: 1em;
+    font-size: calc(1.2em + 2vw);
+    opacity: 0.75;
+    font-family: var(--FF-HANKEN-BOLD);
+}
+
+.circal {
+    display: flex;
+    width: 38vw;
+    height:38vw;
+    border-radius: 50%;
+    background: inherit;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--CIRCLE-BG-COLOR);
+}
+
+.circal .pri {
+    font-size: calc(2em + 8vw);
+    font-family: var(--FF-HANKEN-EX-BOLD);
+}
+
+.circal .second {
+    opacity: 0.6;
+    font-size: calc(1em + 1vw);
+    font-family: var(--FF-HANKEN-BOLD);
+}
+
+.header_status {
+    padding: 0.75em;
+    font-size: calc(1.5em + 2vw);
+    font-family: var(--FF-HANKEN-BOLD);
+}
+
+.span_p {
+    max-width: 80vw;
+    text-align: center;
+    padding-bottom: 2em;
+    font-family: var(--FF-HANKEN-MEDIUM);
+}
+
+.header_p {
+    max-width: 30ch;
+    font-size: calc(1em + 1vw);
+    padding-bottom: 0.5em;
+}
+
+.container {
+    max-width: 80vw;
+    margin: auto;
+    margin: 2em auto;
+}
+
+.atribute {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.atribute > * + * {
+    margin-top: 2em;
+}
+
+.attribute_container {
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    font-size: calc(1.1em + 1vw);
+}
+
+.padding {
+    font-family: var(--FF-HANKEN-EX-BOLD);
+    padding: 1em;
+}
+
+.summary {
+    font-size: calc(1em + 1vw);
+    padding: 0;
+    margin: 0;
+    font-family: var(--FF-HANKEN-BOLD);
+}
+
+.percent {
+    opacity: 0.5;
+}
+
+a {
+    text-decoration: none;
+}
+.button {
+    text-align: center;
+    background: var(--BUTTON-BG-COLOR);
+    border-radius: 100px;
+    font-size: calc(1.1em + 1vw);
+}
+
+.button a {
+    color: var(--BUTTON-FONT-COLOR);
+}
+
+.button:hover ,
+.button:focus {
+    cursor: pointer;
+    background: var(--BUTTON-BG-ACTION-COLOR);
+}
+
+.label {
+    display: flex;
+    gap: 1em;
+}
+
+.l_reaction {
+    background-color: var(--REACTION-BG-COLOR);
+}
+
+.l_reaction .reaction{
+    color: var(--REACTION-FONT-COLOR);
+}
+
+.l_memory {
+    background-color: var(--MEMORY-BG-COLOR);
+}
+
+.l_memory .memory{
+    color: var(--MEMORY-FONT-COLOR);
+}
+
+.l_verbal {
+    background-color: var(--VERBAL-BG-COLOR);
+}
+
+.l_verbal .verbal{
+    color: var(--VERBAL-FONT-COLOR);
+}
+
+.l_visual {
+    background-color: var(--VISUAL-BG-COLOR);
+}
+
+.l_visual .visual{
+    color: var(--VISUAL-FONT-COLOR);
+}
+
+@media (min-width: 1440px) {
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        max-width: 55vw;
+        max-height: 75vh; 
+        display: flex;
+        gap: 0;
+        text-align: center;
+        margin: auto;
+        margin-top: 12.5vh;
+        align-items: stretch;
+        box-shadow:9px 9px 12px rgba(0, 0, 0, 0.164);
+        border-radius: 30px;
+    }
+
+    .main_header {
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        position: relative;
+        padding: 0;
+        flex: 1;
+        box-shadow: none;
+    }
+
+    .circal {
+        display: flex;
+        max-width: 14vw;
+        max-height: 14vw;
+    }
+
+    .header_span {
+        padding-top: 0em;
+        font-size: calc(1em + 0.5vw);
+    }
+
+    .circal .pri {
+        font-size: calc(1.5em + 3vw);
+    }
+
+    .circal .second {
+        font-size: calc(1em + 0.3vw);
+    }
+
+    .header_status {
+        font-size: calc(1.5em + 0.6vw);
+    }
+
+    .header_p {
+        max-width: 25ch;
+        font-size: calc(1em + 0.3vw);
+        padding-bottom: 0em;
+    }
+
+    .span_p {
+        padding-bottom: 0em;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0.75em 3em;
+    }
+
+    .atribute {
+        margin: 0;
+    }
+
+    .atribute > * + * {
+        margin-top: 1em;
+    }
+
+    .attribute_container {
+        font-size: calc(1em + 0.3vw);
+    }
+    
+    .padding {
+        padding: 0.75em;
+    }
+    
+    .summary {
+        text-align: start;
+        font-size: calc(1em + 0.3vw);
+        padding-left: 0;
+        padding-top: 0;
+    }
+    
+    .button {
+        margin-top: 1em;
+        font-size: calc(1em + 0.3vw);
+    }
+}
+
+
